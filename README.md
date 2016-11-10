@@ -56,7 +56,7 @@ You can go to the AWS web console to get the public IP or public DNS of the inst
 
 
 ### Few things to note
-    * It is very important that the vagrant has ssh access to the instance. So keypair, ssh pem key and security group should be configured accordingly. Wrong configuration of any one of these will result in failure or hang.
+    * It is very important that the vagrant has ssh access to the instance. So keypair, ssh pem key and security group should be configured accordingly. Wrong configuration of any one of these will result in failure or hang. If you use Ec2 classic, probably you don't need to configure the security groups.
     * We do not launch it in a VPC. So if you have a new AWS account this will be launched in default VPC.
     * Since we sync the `.` folder, you should cd into this directory before running any command.
     * We do not install docker on remote machines. So please make sure that you launch an AMI which contains docker pre-installed. (Or images like CoreOS)

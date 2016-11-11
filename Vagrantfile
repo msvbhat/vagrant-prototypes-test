@@ -15,7 +15,6 @@ Vagrant.configure("2") do |config|
     aws.security_groups = [ ENV['AWS_SECURITY_GROUP'] ]
     aws.tags = { 'Name' => 'vagrant_test' }
     aws.terminate_on_shutdown = true
-    aws.elb = ENV['AWS_ELB']
     override.ssh.username = "core"
     override.ssh.private_key_path = ENV['AWS_SSH_PEM_KEY']
   end
